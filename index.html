@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Verônica Matos | Psicóloga Clínica – Gestalt-Terapia</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <style>
     :root {
       --olive:       #6B7A45;
@@ -427,7 +428,46 @@
       text-decoration:none; font-size:1.2rem;
       transition:all 0.3s; border:2px solid var(--beige-dark);
     }
-    .social-link:hover { background:var(--olive); transform:scale(1.1); }
+    .social-link.whatsapp-link {
+      background:#25D366;
+      border-color:#25D366;
+      color:#FFFFFF;
+    }
+    .social-link.whatsapp-link:hover {
+      background:#1fb95a;
+      border-color:#1fb95a;
+      color:#FFFFFF;
+    }
+    .social-link.instagram-link {
+      background:var(--beige);
+      border-color:var(--beige-dark);
+      color:#FFFFFF;
+    }
+    .social-link.instagram-link:hover {
+      background:var(--beige);
+      border-color:var(--beige-dark);
+      color:#FFFFFF;
+    }
+    .social-link i,
+    .contato-item-icon i,
+    .float-wa i,
+    .btn-white i {
+      font-size: 1rem;
+      line-height: 1;
+    }
+    .social-link.whatsapp-link i,
+    .float-wa i {
+      color:#FFFFFF;
+    }
+    .social-link.instagram-link i,
+    .contato-item-icon .fa-instagram {
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+    .social-link:not(.whatsapp-link):not(.instagram-link):hover { background:var(--olive); transform:scale(1.1); }
 
     /* ── FOOTER ── */
     footer {
@@ -451,13 +491,14 @@
     /* ── FLOATING WA ── */
     .float-wa {
       position:fixed; bottom:2rem; right:2rem;
-      width:58px; height:58px;
+      width:72px; height:72px;
       background:#25D366; border-radius:50%;
       display:flex; align-items:center; justify-content:center;
-      font-size:1.7rem; text-decoration:none;
+      font-size:2.05rem; text-decoration:none;
       box-shadow:0 4px 20px rgba(37,211,102,0.4);
       transition:transform 0.3s; z-index:200;
     }
+    .float-wa i { font-size: 2.05rem; }
     .float-wa:hover { transform:scale(1.1); }
 
     /* ── ANIMATIONS ── */
@@ -599,7 +640,7 @@
   <h2>Pronto para dar o primeiro passo?</h2>
   <p>O processo começa com uma conversa. Entre em contato e agendemos sua primeira sessão — online ou presencial.</p>
   <div class="cta-btns">
-    <a href="https://wa.me/5521990925314" target="_blank" class="btn-white">💬 WhatsApp</a>
+    <a href="https://wa.me/5521990925314" target="_blank" class="btn-white"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
     <a href="tel:+5521990925314" class="btn-outline-white">📞 Ligar agora</a>
   </div>
 </div>
@@ -658,7 +699,7 @@
     </div>
 
     <div class="contato-item">
-      <div class="contato-item-icon">📸</div>
+      <div class="contato-item-icon"><i class="fa-brands fa-instagram"></i></div>
       <div>
         <strong>Instagram</strong>
         <a href="https://instagram.com/psicologa_veronicamatos" target="_blank">@psicologa_veronicamatos</a>
@@ -682,8 +723,8 @@
     </div>
 
     <div class="social-links">
-      <a href="https://wa.me/5521990925314" target="_blank" class="social-link" title="WhatsApp">💬</a>
-      <a href="https://instagram.com/psicologa_veronicamatos" target="_blank" class="social-link" title="Instagram">📸</a>
+      <a href="https://wa.me/5521990925314" target="_blank" class="social-link whatsapp-link" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="https://instagram.com/psicologa_veronicamatos" target="_blank" class="social-link instagram-link" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
       <a href="tel:+5521990925314" class="social-link" title="Ligar">📞</a>
     </div>
   </div>
@@ -704,7 +745,7 @@
 </footer>
 
 <!-- FLOATING WA -->
-<a href="https://wa.me/5521990925314" target="_blank" class="float-wa" title="Fale no WhatsApp">💬</a>
+<a href="https://wa.me/5521990925314" target="_blank" class="float-wa" title="Fale no WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
 
 <script>
   function toggleMenu() {
